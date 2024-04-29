@@ -8,12 +8,18 @@
         #animationAllbtn{
             position: absolute;
             border: 0;
-            width: 1.5rem;
+            width: 2.8rem;
             height: 1.5rem;
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
-            background-color: transparent; 
+            background-color: yellow; 
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+        #animationAllbtn::before{
+            top: 0;
         }
         #animationAllbtn::before,
         #animationAllbtn::after{
@@ -22,12 +28,21 @@
             display: block;
             height: 3px;
             background-color: black;
+            position: absolute;
+            left: 0;
+            width: 100%;
+
+        }
+        #animationAllbtn::after{
+            bottom: 0;
         }
         #animationAllbtn span{
             display: block;
             height: 3px;
             background-color: black;
-            margin: 8px 0;
+            /*absolute에서는 마진이 잘 안먹힘 마진을 relative와 씀, 패딩은 상관없지만 마이너스개념 없음*/
+            width: 100%;
+        
         }
 
     
@@ -35,7 +50,9 @@
 </head>
 <body>
     <button id="animationAllbtn">
-        <span></span>
+        <span>
+
+        </span>
     </button>
 </body>
 </html>
