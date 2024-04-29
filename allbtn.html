@@ -30,8 +30,9 @@
             position: absolute;
             left: 0;
             width: 100%;
+            transition: 0.5s;
         }
-        #animationAllbtn::after{
+        #animationAllbtn:after{
             bottom: 0;
         }
         #animationAllbtn span{
@@ -47,7 +48,15 @@
         #animationAllbtn.show span{
             width: 0;
         }
-
+        #animationAllbtn.show:before{
+            transform: rotate(-45deg);
+            top: 12px;
+        }
+        #animationAllbtn.show:after{
+            transform: rotate(45deg);
+            top: 13px;
+        }
+    
     
     </style>
     
@@ -57,13 +66,19 @@
         <span></span>
     </button>
     <script>
-        window.addEventListener('load', function(){
+      let status = true;
             document.getElementById("animationAllbtn").addEventListener('click', function(){
-                document.getElementById("animationAllbtn").classList.add("show")
+               if(status){
+                document.getElementById("animationAllbtn").classList.add("show");
+                status =false;
+               }else{
+                document.getElementById("animationAllbtn").classList.remove("show");
+                status = true;
+               }
+              // window.addEventListener('load', function(){
+              //document.getElementById("animationAllbtn").addEventListener('click', function(){
+             //document.getElementById("animationAllbtn").classList.add("show")
             })
-           
-            // document.body.classList = "show action popup" ;
-        })
     </script>
 </body>
 </html>
