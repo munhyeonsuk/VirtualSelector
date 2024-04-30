@@ -5,33 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>반응형제작하기</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
-    <style>
-        .img-fluid{
-            max-width: 100%;
-        }
-        #mainBanner{
-            background-image: url("./img/bg.png");
-            height: 100vw;
-            max-height: 800px;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: auto 100%;
-            transition: 0.5s;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 80px;
-        }
-        #mainBanner:hover{
-            background-size: auto 150%;
-        }
-        @media (max-width:991px) {
-            h2 span{
-                display: none;
-                /*화면이 991보다 작아지면 span 안나탐*/
-            }
-        }
+   <link rel="stylesheet" href="./css/rwd.css">
+   <!-- href css독립적으로 들어옴/ 자바스크립트 src로 들어오는 애들은 html이 다 랜딩 될때까지 들어오지 않음,출력하는 html 기준 내가 포함되어있는 그곳으로 계산 -->
+   <style>
+        
     </style>
 </head>
 <body>
